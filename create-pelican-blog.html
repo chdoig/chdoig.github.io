@@ -44,7 +44,7 @@
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
     <!--link href="/theme/css/pygments.css" rel="stylesheet"-->
     <link href="/theme/css/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/theme/css/style.css">    
+  
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="jquery.pageslide.css">
@@ -112,7 +112,7 @@
 <li>Publishing on Github Pages: How to get the blog up and running?</li>
 </ul>
 <h2>Deciding platform</h2>
-<p>Once you decide to start a blog, one of the first questions that might come to your mind is: What platform should I use? There are many diferent blogging platforms out there and choosing the right platform for you will depend on some personal preferences. If you don't want anything to do with the command line and some code, then I'll recommend you to stop reading here and go for one of the following: <a href="">Wordpress</a>, <a href="">Blogger</a> or <a href="">Tumblr</a>.</p>
+<p>Once you decide to start a blog, one of the first questions that might come to your mind is: What platform should I use? There are many diferent blogging platforms out there and choosing the right platform for you will depend on some personal preferences. If you don't want anything to do with the command line and some code, then I'll recommend you to stop reading here and go for one of the following: <a href="http://wordpress.com/">Wordpress</a>, <a href="https://www.blogger.com/">Blogger</a> or <a href="https://www.tumblr.com/">Tumblr</a>.</p>
 <p>If you're not affraid of the command line, then you're left with the options above and a static-site generator.</p>
 <h3>Static vs Dynamic</h3>
 <p>So, let's define first what dynamic vs static website means. In a dynamic website the contents of the site live in a database, and are converted into presentation-ready HTML only when a user wants to see the page. In a static website, the whole site is uploaded to the server as a folder full of HTML files (and images, CSS, etc). <a href="http://getnikola.com/handbook.html#why-static">Nikola</a> has a nice section on "Why Static?". It provides four reasons to chose a static versus a dynamic blog:</p>
@@ -183,7 +183,7 @@
 
 <p>Next, we're going to customize a theme, get some plugins, tune the pelicanconf.py file and create the content, articles and pages in either a Markdown or reST format. With the <code>make devserver</code> command you can easily see the changes in your browser.</p>
 <h2>Creating a custom theme</h2>
-<p>I had a clear idea of how I wanted my blog to look like and this is the result. If you would like to get the theme for your blog, you can get the Bootstrap-dreamers-theme <a href="">here</a>. I'm going to walk you through the changes I made and show you how you can customize it for your blog.</p>
+<p>I had a clear idea of how I wanted my blog to look like and this is the result. If you would like to get the theme for your blog, you can get the pelican-bootstrap3-lovers-theme <a href="">here</a>. I'm going to walk you through the changes I made and show you how you can customize it for your blog.</p>
 <p>I've developed this theme using <a href="http://getbootstrap.com/">Twitter-Bootstrap</a>. It is self-defined as a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. There are a lot of tools built for Bootstrap and it makes it easy and fast even for non-designers to get something decent up and running. There are a lot of nice resources built for Bootstrap. For a full list, visit the <a href="http://www.bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources">Big Badass List of Twitter Boostrap Resources</a>.</p>
 <p>I started out with Daan Debie's <a href="https://github.com/DandyDev/pelican-bootstrap3">Bootstrap 3 for Pelican</a>. He's done a great job of setting Bootstrap for Pelican and including <a href="http://bootswatch.com/">Bootswatch themes</a>, built by Thomas Park. He's also added some nice plugins and layout settings. Although that was a starting point, I've done enough customizations that it has evolved to become a theme on its own. The following is a list of the customizations I've made and that I'm going to discuss in detail next:</p>
 <ul>
@@ -216,7 +216,14 @@
 </code></pre>
 
 <h3>Set a background image</h3>
-<p>Another way to give your blog some personality is by adding a background. You can take a look at <a href="http://subtlepatterns.com/">Subtle Patterns</a>, which has a collection of over 300 patterns that you can preview and download. This blog uses a pattern called <a href="http://subtlepatterns.com/ticks/">Ticks</a>. To add a background in your theme you just have to save the file in your image folder and add following code in your <code>style.css</code> file.</p>
+<p>Another way to give your blog some personality is by adding a background. You can take a look at <a href="http://subtlepatterns.com/">Subtle Patterns</a>, which has a collection of over 300 patterns that you can preview and download. This blog uses a pattern called <a href="http://subtlepatterns.com/ticks/">Ticks</a>. To add a background in your theme you just have to save the file in your image folder inside the theme folder:</p>
+<pre><code class="language-bash">  yourproject/
+  └── theme/
+      └── images/
+          └──background.png
+</code></pre>
+
+<p>Then add following code in your <code>style.yourthemename.css</code> file.</p>
 <pre><code class="language-css">body {
     background: url('../images/background.png');
 }
@@ -250,7 +257,7 @@ PROFILE_PICTURE = &quot;yourprofilepicture.png&quot;
 </code></pre>
 
 <h3>Change fonts</h3>
-<p>You can use <a href="http://www.google.com/fonts/">Google Fonts</a> to find a pair of fonts that you like. For some inspiration on font combination read <a href="http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/">this article</a>. The two recomendations that I've followed from this article were: Go easy and Contrast is key. I've picked Dancing Script for the headers and Cabin for the body. Once you find your fonts, copy the url that <a href="http://www.google.com/fonts/">Google Fonts</a> provides you and set the font you want each of the elements to have. For example:</p>
+<p>You can use <a href="http://www.google.com/fonts/">Google Fonts</a> to find a pair of fonts that you like. For some inspiration on font combination read <a href="http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/">this article</a>. The two recomendations that I've followed from this article were: Go easy and Contrast is key. I've picked Dancing Script for the headers and Cabin for the body. Once you find your fonts, copy the url that <a href="http://www.google.com/fonts/">Google Fonts</a> provides you and set the font you want each of the elements to have in your <code>style.yourthemename.css</code>. For example:</p>
 <pre><code class="language-css">@import url(http://fonts.googleapis.com/css?family=yourfontname1);
 @import url(http://fonts.googleapis.com/css?family=yourfontname2);
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:'yourfontname1;}
@@ -258,7 +265,7 @@ p{font-family:'yourfontname2';}
 </code></pre>
 
 <h3>Custom buttons</h3>
-<p>Design a custom button using Charlie Park's <a href="http://charliepark.org/bootstrap_buttons/">Beautiful Buttons for Twitter Bootstrappers</a>. Copy the CSS to <code>your style.css</code> file and change <code>.btn-custom</code> to <code>.btn-default</code>. So you should have something like:</p>
+<p>Design a custom button using Charlie Park's <a href="http://charliepark.org/bootstrap_buttons/">Beautiful Buttons for Twitter Bootstrappers</a>. Copy the CSS to <code>your style.yourtheme.css</code> file and change <code>.btn-custom</code> to <code>.btn-default</code>. So you should have something like:</p>
 <pre><code class="language-css">.btn-default{
   # YOUR CSS CODE
 }
@@ -267,7 +274,7 @@ p{font-family:'yourfontname2';}
 <h3>Custom social media icons</h3>
 <p>Check out <a href="http://www.deviantart.com/?qh=&amp;section=&amp;global=1&amp;q=social+media+icons">Deviantart</a> for free social media icons. There are a lot of great designs. If you can't find any that you like you can always make them yourself or modify them using <a href="http://www.gimp.org/">GIMP</a>. Save the icons you would like to use under the following folder:</p>
 <pre><code class="language-bash">  yourproject/
-  └── content/
+  └── theme/
       └── images/
           └──socialmediasite-icon.png
 </code></pre>
@@ -298,6 +305,10 @@ p{font-family:'yourfontname2';}
     &lt;!--script src=&quot;{{ SITEURL }}/theme/js/prism.js&quot;&gt;&lt;/script--&gt;
 </code></pre>
 
+<p>And leave the MD_EXTENSIONS to:</p>
+<pre><code class="language-python">MD_EXTENSIONS = ['codehilite(css_class=highlight)']
+</code></pre>
+
 <h2>Additional features</h2>
 <p>I have also added two widgets to my blog: Latest Tweets and Goodread quotes. To activate them you'll need to set up the following variables in your <code>pelicanconf.py</code> file:</p>
 <pre><code class="language-python">TWITTER_USERNAME = XXXXX
@@ -314,7 +325,7 @@ GOODREADS_ID = XXXXX
 <h2>Publishing to Github</h2>
 <p>For information regarding publishing your blog on Github check <a href="http://pelican.readthedocs.org/en/3.3.0/tips.html#publishing-to-github">Pelican</a> or <a href="https://help.github.com/articles/user-organization-and-project-pages">Github</a>.</p>
 <p>I'm using a User Page, so I just have to set up a repo named <code>chdoig.github.io</code>, and upload my the output folder there.</p>
-<p>And we're done! Hopefully now you'll be able to set up your blog and customize it to your own taste. If you have any questions, I'll be happy to help you out! Thank you for reading!</p>
+<p>And we're done! Hopefully now you'll be able to set up your blog and customize it to your own preferences. If you have any questions, I'll be happy to help you out! Thank you for reading!</p>
                     </div>
                 </div>
             </div>
@@ -395,8 +406,8 @@ GOODREADS_ID = XXXXX
             ~ Tag cloud ~
     </div>
     <div class="panel-body">
-            <a href="/tag/pelican.html"><span class="label label-default">pelican</span></a>
             <a href="/tag/blog.html"><span class="label label-default">blog</span></a>
+            <a href="/tag/pelican.html"><span class="label label-default">pelican</span></a>
  
     </div>
 </div>
@@ -484,6 +495,19 @@ GOODREADS_ID = XXXXX
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="/theme/js/respond.min.js"></script>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'christine-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
