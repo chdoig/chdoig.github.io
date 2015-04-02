@@ -1,211 +1,80 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+<html lang="en">
 <head>
-    <title>A personal blog on Data Science - Tags</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph tags -->
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Christine Doig's blog</title>
+  <meta name="description" content="A personal blog on Data Science, Python, R and Open Source">
+  <meta name="author" content="Christine Doig">
 
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content="A personal blog on Data Science"/>
-            <meta property="og:url" content=""/>
-            <meta property="og:description" content="A personal blog on Data Science"/>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.lovers.min.css" type="text/css"/>
-        <link rel="stylesheet" href="/theme/css/style.lovers.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
-    <!--link href="/theme/css/pygments.css" rel="stylesheet"-->
-    <link href="/theme/css/prism.css" rel="stylesheet" />
-  
-    <!-- JavaScript plugins (requires jQuery) -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="jquery.pageslide.css">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Sacramento|Ruthie' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="./theme/css/normalize.css">
+  <link rel="stylesheet" href="./theme/css/skeleton.css">
+  <link rel="stylesheet" href="./theme/css/custom.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="./theme/css/github-prettify-theme.css">
+  <script src="./theme/js/site.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="./theme/images/favicon.ico">
 
 </head>
-<body>
+<body class="code-snippets-visible">
 
-<div class="wrap">
-
-<div class="container">
-    <div class="row-quote">
-    	<a href="https://www.goodreads.com/user/show/22231242-christine"></a>
-    	<h4><div id="gr_quote_body">
-    	</div></h4>
-		<script src="https://www.goodreads.com/quotes/widget/22231242-christine?v=2" type="text/javascript"></script>
-	</div>
-</div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-md-8 col-lg-9 col-xs-12">
-                <div>
-                <img src="/images/keyboardred.png" class="img-responsive" alt="Responsive image">
-                </div>
-                <hr class="hidden-xs"/>
-
-    <section id="tags">
-        <h1>Tags for A personal blog on Data Science</h1>
-        <ul>                <li><a href="/tag/blog.html">blog</a> (1)</li>
-                <li><a href="/tag/pelican.html">pelican</a> (1)</li>
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="./">Home</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="./archives">Blog</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="./pages/talks">Talks</a>
+          <!--li class="navbar-item"><a class="navbar-link" href="./pages/projects">Projects</a></li-->
+          <!--li class="navbar-item"><a class="navbar-link" href="./pages/photography">Photography</a></li-->
+          <!--li class="navbar-item">
+            <a class="navbar-link" href="./pages/about">About</a>
+          </li-->
         </ul>
-    </section>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-3 col-xs-12">
-                <div class="row text-center">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <img class="img-circle image100" src="/images/ChristineDoig.jpg" alt="" />
-                    </div>
-                </div><hr />
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a class="btn btn-default" href="/index.html">Home</a></li>
-                            <li><a class="btn btn-default" href="/pages/about.html">About</a></li>
-                            <li><a class="btn btn-default" href="/pages/bio.html">Bio</a></li>
-                    <li>
-                        <a class="btn btn-default" href="/archives.html">Archives</a>
-                    </li>
-                </ul><hr />
+        <div>
+            <a class="navbar-link" href="./"><img src="./images/CDB.png" class="site-icon"></a>
+          </div>
+      </div>
+    </nav>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        ~ About me ~
-    </div>
-    <div class="panel-body">
-        Data Lover. Master Student in Innovation and Research in Informatics, spec. Data Mining and Business Intelligence at FIB-UPC
-    </div>
-</div>
-
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        ~ Follow me ~
-    </div>
-    <div class="panel-body">
-        <a href="http://twitter.com/dream_bcn"><img
-            class= "social-icon" src="/theme/images/twitter-icon.png"></img>
-        </a>
-        <a href="http://www.linkedin.com/in/christinedoigcardet/"><img
-            class= "social-icon" src="/theme/images/linkedin-icon.png"></img>
-        </a>
-        <a href="http://github.com/chdoig"><img
-            class= "social-icon" src="/theme/images/github-icon.png"></img>
-        </a>
-    </div>
-</div>
-
-<div class="panel panel-primary">
-    <div class="panel-heading">
-            ~ Tag cloud ~
-    </div>
-    <div class="panel-body">
-            <a href="/tag/blog.html"><span class="label label-default">blog</span></a>
-            <a href="/tag/pelican.html"><span class="label label-default">pelican</span></a>
- 
-    </div>
-</div>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <h1>Tags for Christine Doig's blog</h1>        <li><a href="./tag/blog.html">blog</a> (1)</li>
+        <li><a href="./tag/pelican.html">pelican</a> (1)</li>
 
 
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+  </script>
 
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            ~ GitHub Recent Activity ~
-        </div>
-        <div class="panel-body">
-            <div id="gh_repos">
-             <p class="list-group-item">Status updating...</p>
-            </div>
-         </div>
-    </div>
+<footer class="footer">&copy Christine Doig. 2015</footer>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                if (!window.jXHR) {
-                    var jxhr = document.createElement('script');
-                    jxhr.type = 'text/javascript';
-                    jxhr.src = '/theme/js/jXHR.js';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(jxhr, s);
-                }
-
-                github.showRepos({
-                    user: 'chdoig',
-                    count: 5,
-                    skip_forks: false,
-                    target: '#gh_repos'
-                });
-            });
-        </script>
-        <script src="/theme/js/github.js" type="text/javascript"></script>
-
-<div class="panel panel-default">
-    <div class="panel-heading">
-    	~ Latest Tweets ~
-    </div>
-    <div class="panel-body">
-		<a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/ch_doig" data-widget-id="426271665585012736">Tweets by ch_doig</a>
-	</div>
-
-</div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        ~ Interesting Links ~
-    </div>
-    <div class="panel-body">
-        <li class="list-group-item"><a href="http://hillarymason.com">Hillary Mason
-        </a></li>
-        <li class="list-group-item"><a href="http://www.datasciencecentral.com">Data Science Central
-        </a></li>
-        <li class="list-group-item"><a href="http://www.kdnugget.com">KDnuggets
-        </a></li>
-    </div>
-</div>
-
-                    
-            </div>
-        </div>
-        <hr class="hidden-xs"/>
-        <div class="row">
-            <div class="footer">
-                <div class="container">
-                    <p class="footnote">Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. Thanks to <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and <a href="http://subtlepatterns.com/">Subtle Patterns</a>. </a><a href="https://github.com/chdoig/pelican-bootstrap3-lovers">Lovers Theme</a> by <a href="https://github.com/chdoig">Christine Doig</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.pageslide.min.js"></script>
-<script src="/theme/js/prism.js"></script>
-<script>function validateForm(query)
-    {return (query.length > 0);}
-</script>
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'christine-blog'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -222,5 +91,4 @@
         })();
 
     </script>
-</body>
 </html>
